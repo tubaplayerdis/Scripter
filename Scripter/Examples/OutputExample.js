@@ -2,7 +2,7 @@
 var TimesToLoop = 10
 var FirstAdd = 5
 var SecondAdd = 6
-//Variebles
+//Variables
 
 //Basic Hello
 Console.Log("Hello From Javascript");

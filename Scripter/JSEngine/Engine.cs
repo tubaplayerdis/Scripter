@@ -6,6 +6,17 @@ using Scripter;
 using Microsoft.ClearScript;
 using System.Windows.Forms;
 
+
+/*
+ * To do:
+ * 
+ * More classes exposed and more examples
+ * 
+ * 
+ * 
+ * 
+ */
+
 namespace Engine_Work
 {
     public static class Startup
