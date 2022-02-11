@@ -1,0 +1,17 @@
+﻿<Window x:Name="Editor_Window" x:Class="Scripter.Views.EditorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Scripter.Views"
+        mc:Ignorable="d"
+        Title="Scripter - Editor" Height="450" Width="800" Icon="/Icon/48-482451_scroll-paper-clip-art-transparent-scroll-paper-png.png" ResizeMode="NoResize" SizeToContent="WidthAndHeight">
+    <Grid>
+        <RichTextBox x:Name="EditorBox" HorizontalAlignment="Left" Height="414" Margin="10,0,0,0" VerticalAlignment="Center" Width="635">
+            <FlowDocument/>
+        </RichTextBox>
+        <Button x:Name="Execute_Button" Content="Execute Program" HorizontalAlignment="Left" Height="44" Margin="650,331,0,0" VerticalAlignment="Top" Width="140" Click="Execute_Button_Click"/>
+        <Button x:Name="Go_To_Start_Button" Content="Go back to start" HorizontalAlignment="Left" Height="44" Margin="650,380,0,0" VerticalAlignment="Top" Width="140" Click="Go_To_Start_Button_Click"/>
+
+    </Grid>
+</Window>

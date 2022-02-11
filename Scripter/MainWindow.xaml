@@ -1,0 +1,14 @@
+﻿<Window x:Name="MainWindow1" x:Class="Scripter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Scripter"
+        mc:Ignorable="d" Height="450" Width="800" SizeToContent="Manual" Title="Start" Icon="Icon/48-482451_scroll-paper-clip-art-transparent-scroll-paper-png.png" ResizeMode="NoResize" Loaded="MainWindow1_Loaded">
+    <Grid Background="#FF77779A">
+        <Label x:Name="Scripter_Label" Content="Scripter" HorizontalAlignment="Left" Height="84" Margin="22,32,0,0" VerticalAlignment="Top" Width="257" FontSize="48"/>
+        <Button x:Name="Single_File_Mode_Button" Content="Single File Mode" HorizontalAlignment="Left" Height="111" Margin="22,217,0,0" VerticalAlignment="Top" Width="334" Background="#FF8891D4" Click="Single_File_Mode_Button_Click"/>
+        <Button x:Name="Multi_File_Mode_Button" Content="Multiple File Mode(Coming soon)" HorizontalAlignment="Left" Height="111" Margin="438,217,0,0" VerticalAlignment="Top" Width="334" Background="#FF8891D4" IsEnabled="False"/>
+
+    </Grid>
+</Window>

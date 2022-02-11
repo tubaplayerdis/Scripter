@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="48-482451_scroll-paper-clip-art-transparent-scroll-paper-png.png" />
+    <None Remove="Icon\48-482451_scroll-paper-clip-art-transparent-scroll-paper-png.png" />
+    <None Remove="Views\48-482451_scroll-paper-clip-art-transparent-scroll-paper-png.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ClearScript" Version="7.2.2" />
+    <PackageReference Include="Microsoft.ClearScript.Core" Version="7.2.2" />
+    <PackageReference Include="Microsoft.ClearScript.V8" Version="7.2.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="48-482451_scroll-paper-clip-art-transparent-scroll-paper-png.png" />
+    <Resource Include="Icon\48-482451_scroll-paper-clip-art-transparent-scroll-paper-png.png" />
+    <Resource Include="Views\48-482451_scroll-paper-clip-art-transparent-scroll-paper-png.png" />
+  </ItemGroup>
+
+</Project>
