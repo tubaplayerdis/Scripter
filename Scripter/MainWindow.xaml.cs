@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Data_Management;
 
 namespace Scripter
 {
@@ -23,6 +24,7 @@ namespace Scripter
         public MainWindow()
         {
             InitializeComponent();
+            //LocalData.InitRuntimeData();
         }
 
         private void MainWindow1_Loaded(object sender, RoutedEventArgs e)

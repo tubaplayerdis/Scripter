@@ -4,6 +4,7 @@ using System.Linq;
 using Microsoft.ClearScript.V8;
 using Scripter;
 using Microsoft.ClearScript;
+
 using System.Windows.Forms;
 
 
@@ -28,6 +29,7 @@ namespace Engine_Work
             Engine.AddHostType("Console", typeof(Safe));
             Engine.AddHostType("Dialogs", typeof(Dialogs));
             //Engine.AddHostType("MDI", typeof(MDIParent1));
+            
 
         }
 
@@ -37,7 +39,8 @@ namespace Engine_Work
 
             try
             {
-
+                Safe.output = new Ouptut();
+                Safe.isUsed = false;
                 Engine.Execute(Script);
                 Safe.output = new Ouptut();
                 Safe.isUsed = false;
@@ -63,13 +66,22 @@ namespace Engine_Work
 
 
         //meant to be used funcs
+
         public static void Log(string input)
+        {
+            if (isUsed)
+            {
+                Init();
+            }
+            output.Addline(input);
+        }
+        public static void Log(string[] input)
         {
             if (!isUsed)
             {
                 Init();
             }
-            output.Addline(input);
+            output.addarayoflines(input);
         }
 
         public static void ClearText()

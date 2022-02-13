@@ -17,6 +17,14 @@ namespace Scripter
             InitializeComponent();
         }
 
+        public void addarayoflines(string[] textarray)
+        {
+            foreach (string text in textarray)
+            {
+                textBox1.AppendText(text);
+            }
+        }
+
         public void Addline(string text)
         {
             textBox1.AppendText(text + "\r\n");

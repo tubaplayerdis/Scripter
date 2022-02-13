@@ -5,13 +5,48 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Scripter.Views"
         mc:Ignorable="d"
-        Title="Scripter - Editor" Height="450" Width="800" Icon="/Icon/48-482451_scroll-paper-clip-art-transparent-scroll-paper-png.png" ResizeMode="NoResize" SizeToContent="WidthAndHeight">
-    <Grid>
-        <RichTextBox x:Name="EditorBox" HorizontalAlignment="Left" Height="414" Margin="10,0,0,0" VerticalAlignment="Center" Width="635">
+        Title="Scripter - Editor" Icon="/Icon/48-482451_scroll-paper-clip-art-transparent-scroll-paper-png.png" ResizeMode="NoResize" SizeToContent="WidthAndHeight">
+    <Grid x:Name="grid" Width="788" Height="468" Initialized="grid_Initialized">
+        <RichTextBox x:Name="EditorBox" HorizontalAlignment="Left" Height="412" Margin="10,0,0,0" VerticalAlignment="Center" Width="623" RenderTransformOrigin="0.5,0.5" SelectionChanged="EditorBox_SelectionChanged">
             <FlowDocument/>
         </RichTextBox>
-        <Button x:Name="Execute_Button" Content="Execute Program" HorizontalAlignment="Left" Height="44" Margin="650,331,0,0" VerticalAlignment="Top" Width="140" Click="Execute_Button_Click"/>
-        <Button x:Name="Go_To_Start_Button" Content="Go back to start" HorizontalAlignment="Left" Height="44" Margin="650,380,0,0" VerticalAlignment="Top" Width="140" Click="Go_To_Start_Button_Click"/>
+        <Button x:Name="Execute_Button" Content="Execute Program" HorizontalAlignment="Left" Height="44" Margin="640,349,0,0" VerticalAlignment="Top" Width="138" Click="Execute_Button_Click"/>
+        <Button x:Name="Go_To_Start_Button" Content="Go back to start" HorizontalAlignment="Left" Height="44" Margin="640,398,0,0" VerticalAlignment="Top" Width="138" Click="Go_To_Start_Button_Click"/>
+        <StatusBar x:Name="StatusBar1" HorizontalAlignment="Center" Height="21" Margin="0,447,0,0" VerticalAlignment="Top" Width="788">
+            <StatusBarItem HorizontalAlignment="Left">
+                <TextBlock x:Name="FileNameBlock" Text="FileNameHere"/>
+            </StatusBarItem>
+            <StatusBarItem>
+                <Separator></Separator>
+            </StatusBarItem>
+            <StatusBarItem>
+                <RadioButton x:Name="ISFileSavedView" Content="Saved?" IsEnabled="False" IsChecked="False"></RadioButton>
+            </StatusBarItem>
+            <StatusBarItem HorizontalAlignment="Right">
+                <TextBlock x:Name="Linecharbox" Text="Line, CharBox" HorizontalAlignment="Right"/>
+            </StatusBarItem>
+
+
+        </StatusBar>
+        
+            <ToolBar x:Name="ToolBar1" Margin="0,0,544,442" IsOverflowOpen="False">
+
+                <Button x:Name="NewFileButton" Content="New" ToolTip="Saves then opens a new, blank file" Click="NewFileButton_Click"></Button>
+                <Separator></Separator>
+                <Button x:Name="OpenFileButton" Content="Open" ToolTip="Opens an exisiting file into the editor" Click="OpenFileButton_Click"></Button>
+                <Separator></Separator>
+                <Button x:Name="SaveFileButton" Content="Save" ToolTip="Saves your current file" Click="SaveFileButton_Click"></Button>
+                <Separator></Separator>
+                <Button x:Name="CutButton" Content="Cut" ToolTip="Cuts your text, then copies cut text into Windows Clipboard" Click="Button_Click"></Button>
+                <Separator></Separator>
+                <Button x:Name="CopyButton" Content="Copy" ToolTip="Copies selected text to Windows Clipboard" Click="CopyButton_Click"></Button>
+                <Separator></Separator>
+                <Button x:Name="PasteButton" Content="Paste" ToolTip="Pastes text into editor from Windows Clipboard" Click="PasteButton_Click"></Button>
+
+            </ToolBar>
+
+
+
 
     </Grid>
 </Window>
